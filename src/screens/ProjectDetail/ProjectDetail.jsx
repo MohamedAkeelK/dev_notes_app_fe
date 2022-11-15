@@ -37,12 +37,13 @@ const ProjectDetail = (props) => {
             <Link className='edit-button' to={`/projects/${project._id}/edit`}>
               Edit
             </Link>
-            <button
+            <Link
+              to={`/projects`}
               className='delete-button'
               onClick={() => deleteProject(project._id)}
             >
               Delete
-            </button>
+            </Link>
           </div>
         </div>
       </div>
