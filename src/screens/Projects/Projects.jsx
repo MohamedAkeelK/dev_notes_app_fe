@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react'
-import './Products.css'
+import './Projects.css'
 
-import { Layout, Product, Search, Sort } from '../../components'
+import { Layout, Project, Search, Sort } from '../../components'
 import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
-import { getProducts } from '../../services/products'
+import { getProjects } from '../../services/projects'
 
-const Products = (props) => {
-  const [products, setProducts] = useState([])
+const Projects = (props) => {
+  const [projects, setProjects] = useState([])
   const [searchResult, setSearchResult] = useState([])
   const [applySort, setApplySort] = useState(false)
   const [sortType, setSortType] = useState('name-ascending')
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const allProducts = await getProducts()
-      setProducts(allProducts)
-      setSearchResult(allProducts)
+    const fetchProjects = async () => {
+      const allProjects = await getProjects()
+      setProjects(allProjects)
+      setSearchResult(allProjects)
     }
-    fetchProducts()
+    fetchProjects()
   }, [])
 
   const handleSort = (type) => {
@@ -48,8 +48,8 @@ const Products = (props) => {
   }
 
   const handleSearch = (event) => {
-    const results = products.filter((product) =>
-      product.name.toLowerCase().includes(event.target.value.toLowerCase())
+    const results = projects.filter((project) =>
+      project.name.toLowerCase().includes(event.target.value.toLowerCase())
     )
     setSearchResult(results)
     setApplySort(true)
@@ -62,12 +62,12 @@ const Products = (props) => {
       <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} />
       <div className='products'>
-        {searchResult.map((product, index) => {
+        {searchResult.map((project, index) => {
           return (
-            <Product
-              _id={product._id}
-              name={product.name}
-              imgURL={product.imgURL}
+            <Project
+              _id={project._id}
+              name={project.name}
+              imgURL={project.imgURL}
               // price={product.price}
               key={index}
             />
@@ -78,4 +78,4 @@ const Products = (props) => {
   )
 }
 
-export default Products
+export default Projects

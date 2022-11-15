@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react'
-import './ProductEdit.css'
+import './ProjectEdit.css'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Layout } from '../../components'
-import { getProduct, updateProduct } from '../../services/products'
+import { getProject, updateProject } from '../../services/projects'
 
-const ProductEdit = (props) => {
+const ProjectEdit = (props) => {
 
   let navigate = useNavigate()
 
-  const [product, setProduct] = useState({
+  const [project, setProject] = useState({
     name: '',
     description: '',
     imgURL: '',
@@ -17,25 +17,25 @@ const ProductEdit = (props) => {
   let { id } = useParams()
 
   useEffect(() => {
-    const fetchProduct = async () => {
-      const product = await getProduct(id)
-      setProduct(product)
+    const fetchProject = async () => {
+      const project = await getProject(id)
+      setProject(project)
     }
-    fetchProduct()
+    fetchProject()
   }, [id])
 
   const handleChange = (event) => {
     const { name, value } = event.target
-    setProduct({
-      ...product,
+    setProject({
+      ...project,
       [name]: value,
     })
   }
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    await updateProduct(id, product)
-    navigate(`/products/${id}`)
+    await updateProject(id, project)
+    navigate(`/projects/${id}`)
   }
 
   return (
@@ -44,14 +44,14 @@ const ProductEdit = (props) => {
         <div className='image-container'>
           <img
             className='edit-product-image'
-            src={product.imgURL}
-            alt={product.name}
+            src={project.imgURL}
+            alt={project.name}
           />
           <form onSubmit={handleSubmit}>
             <input
               className='edit-input-image-link'
               placeholder='Image Link'
-              value={product.imgURL}
+              value={project.imgURL}
               name='imgURL'
               required
               onChange={handleChange}
@@ -62,7 +62,7 @@ const ProductEdit = (props) => {
           <input
             className='input-name'
             placeholder='Name'
-            value={product.name}
+            value={project.name}
             name='name'
             required
             autoFocus
@@ -73,7 +73,7 @@ const ProductEdit = (props) => {
             rows={10}
             cols={78}
             placeholder='Description'
-            value={product.description}
+            value={project.description}
             name='description'
             required
             onChange={handleChange}
@@ -87,4 +87,4 @@ const ProductEdit = (props) => {
   )
 }
 
-export default ProductEdit
+export default ProjectEdit

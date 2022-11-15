@@ -1,6 +1,6 @@
 import api from "./apiConfig";
 
-export const getProducts = async () => {
+export const getProjects = async () => {
   try {
     const response = await api.get("/projects");
     return response.data;
@@ -9,7 +9,7 @@ export const getProducts = async () => {
   }
 };
 
-export const getProduct = async (id) => {
+export const getProject = async (id) => {
   try {
     const response = await api.get(`/projects/${id}`);
     return response.data;
@@ -18,25 +18,25 @@ export const getProduct = async (id) => {
   }
 };
 
-export const createProduct = async (product) => {
+export const createProject = async (project) => {
   try {
-    const response = await api.post("/projects", product);
+    const response = await api.post("/projects", project);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const updateProduct = async (id, product) => {
+export const updateProject = async (id, project) => {
   try {
-    const response = await api.put(`/projects/${id}`, product);
+    const response = await api.put(`/projects/${id}`, project);
     return response.data;
   } catch (error) {
     throw error;
   }
 };
 
-export const deleteProduct = async (id) => {
+export const deleteProject = async (id) => {
   try {
     const response = await api.delete(`/projects/${id}`);
     return response.data;

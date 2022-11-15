@@ -1,10 +1,10 @@
-import './ProductCard.css';
+import './ProjectCard.css';
 import { Link } from 'react-router-dom'
 
-const ProductCard = (props) => {
+const ProjectCard = (props) => {
     return (
         <div className="product-card">
-            <Link className="card" to={`/products/${props._id}`}>
+            <Link className="card" to={`/projects/${props._id}`}>
                 <img className="product-card-image" src={props.imgURL} alt={props.name} />
                 <div>View</div>
             </Link>
@@ -12,4 +12,4 @@ const ProductCard = (props) => {
     )
 }
 
-export default ProductCard
+export default ProjectCard

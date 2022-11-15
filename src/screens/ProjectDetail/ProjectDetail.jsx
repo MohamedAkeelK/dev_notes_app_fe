@@ -1,21 +1,21 @@
 import { useState, useEffect } from 'react'
-import './ProductDetail.css'
+import './ProjectDetail.css'
 import { Layout } from '../../components'
-import { getProduct, deleteProduct } from '../../services/products'
+import { getProject, deleteProject } from '../../services/projects'
 import { useParams, Link } from 'react-router-dom'
 
-const ProductDetail = (props) => {
-  const [product, setProduct] = useState(null)
+const ProjectDetail = (props) => {
+  const [project, setProject] = useState(null)
   const [isLoaded, setLoaded] = useState(false)
   const { id } = useParams()
 
   useEffect(() => {
-    const fetchProduct = async () => {
-      const product = await getProduct(id)
-      setProduct(product)
+    const fetchProject = async () => {
+      const project = await getProject(id)
+      setProject(project)
       setLoaded(true)
     }
-    fetchProduct()
+    fetchProject()
   }, [id])
 
   if (!isLoaded) {
@@ -27,19 +27,19 @@ const ProductDetail = (props) => {
       <div className='product-detail'>
         <img
           className='product-detail-image'
-          src={product.imgURL}
-          alt={product.name}
+          src={project.imgURL}
+          alt={project.name}
         />
         <div className='detail'>
-          <div className='name'>{product.name}</div>
-          <div className='description'>{product.description}</div>
+          <div className='name'>{project.name}</div>
+          <div className='description'>{project.description}</div>
           <div className='button-container'>
-            <Link className='edit-button' to={`/products/${product._id}/edit`}>
+            <Link className='edit-button' to={`/projects/${project._id}/edit`}>
               Edit
             </Link>
             <button
               className='delete-button'
-              onClick={() => deleteProduct(product._id)}
+              onClick={() => deleteProject(project._id)}
             >
               Delete
             </button>
@@ -50,4 +50,4 @@ const ProductDetail = (props) => {
   )
 }
 
-export default ProductDetail
+export default ProjectDetail
