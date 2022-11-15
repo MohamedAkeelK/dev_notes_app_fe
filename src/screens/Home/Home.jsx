@@ -7,8 +7,11 @@ const Home = (props) => {
       <div className='home'>
         <ProjectCards />
       </div>
-    </Layout>
+    </Layout> 
   )
 }
 
 export default Home
+
+
+    
