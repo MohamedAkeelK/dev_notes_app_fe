@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
 
 nav {
     flex: 1;
@@ -73,4 +73,17 @@ a {
     .link {
         padding: 3px;
     }
+} */
+
+.nav {
+  /* border: 2px solid green; */
+  /* width: 100%; */
+  /* background-color: rgb(8, 48, 62); */
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: aqua;
 }

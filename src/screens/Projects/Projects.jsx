@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './Projects.css'
+// import './Projects.css'
 
 import { Layout, Project, Search, Sort } from '../../components'
 // import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'

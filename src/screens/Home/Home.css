@@ -1,5 +1,9 @@
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .home {
         padding: 100px 40px;
     }
+} */
+
+.home { 
+  border: 2px solid orange;
 }
