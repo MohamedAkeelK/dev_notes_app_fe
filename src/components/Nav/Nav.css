@@ -89,3 +89,14 @@ a {
   z-index: 500;
   background-color: aqua;
 }
+
+.top-nav-links {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.top-nav-links > * {
+margin-left: 30px;
+}
