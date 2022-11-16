@@ -10,9 +10,15 @@
   /* height: 100%; */
   /* border: 1px solid rgb(27, 157, 120); */
   margin-left: 20vw;
-  padding: 20px;
+  /* padding: 0 20px 0px 0px; */
+  margin-top: 16vh;
   /* background-color: rgb(156, 156, 156); */
 }
+
+.layout-children {
+  flex: 2;
+  padding: 0 20px 20px 20px;
+} 
 /* 
 .layout-children {
     flex: 2;
