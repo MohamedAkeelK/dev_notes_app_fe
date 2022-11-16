@@ -3,6 +3,8 @@ import api from "./apiConfig";
 export const getProjects = async () => {
   try {
     const response = await api.get("/projects");
+    // console.log(response.data.name);
+
     return response.data;
   } catch (error) {
     throw error;

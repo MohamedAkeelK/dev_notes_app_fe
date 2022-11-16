@@ -3,20 +3,22 @@
     display: flex;
     flex-direction: row;
     /* border: 1px solid red; */
+    /* overflow-x: none; */
+
 }
 
 .main-content {
   width: 100%;
   /* height: 100%; */
   /* border: 1px solid rgb(27, 157, 120); */
-  margin-left: 20vw;
+  margin-left: calc(15vw + 20px);
   /* padding: 0 20px 0px 0px; */
   margin-top: 8vh;
   /* background-color: rgb(156, 156, 156); */
 }
 
 .layout-children {
-  flex: 2;
+  /* flex: 2; */
   padding: 20px 20px 20px 20px;
 } 
 /* 

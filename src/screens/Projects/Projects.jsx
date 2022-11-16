@@ -1,24 +1,24 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react";
 // import './Projects.css'
 
-import { Layout, Project, Search, Sort } from '../../components'
+import { Layout, Project, Search, Sort } from "../../components";
 // import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
-import { getProjects } from '../../services/projects'
+import { getProjects } from "../../services/projects";
 
 const Projects = (props) => {
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState([]);
   // const [searchResult, setSearchResult] = useState([])
   // const [applySort, setApplySort] = useState(false)
   // const [sortType, setSortType] = useState('name-ascending')
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const allProjects = await getProjects()
-      setProjects(allProjects)
+      const allProjects = await getProjects();
+      setProjects(allProjects);
       // setSearchResult(allProjects)
-    }
-    fetchProjects()
-  }, [])
+    };
+    fetchProjects();
+  }, []);
 
   // const handleSort = (type) => {
   //   if (type !== '' && type !== undefined) {
@@ -55,27 +55,32 @@ const Projects = (props) => {
   //   setApplySort(true)
   // }
 
-  const handleSubmit = (event) => event.preventDefault()
+  const handleSubmit = (event) => event.preventDefault();
 
   return (
     <Layout user={props.user}>
       {/* <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} /> */}
-      <div className='products'>
+      <div className="products">
         {projects.map((project, index) => {
           return (
             <Project
               _id={project._id}
               name={project.name}
+              description={project.description}
+              deadline={project.deadline}
               imgURL={project.imgURL}
-              // price={product.price}
+              createdAt={project.createdAt}
+              techStack={project.techStack}
+              team={project.team}
+              tasks={project.tasks}
               key={index}
             />
-          )
+          );
         })}
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
