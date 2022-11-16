@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './ProjectCards.css'
+// import './ProjectCards.css'
 import ProjectCard from '../ProjectCard/ProjectCard'
 import { getProjects } from '../../services/projects'
 

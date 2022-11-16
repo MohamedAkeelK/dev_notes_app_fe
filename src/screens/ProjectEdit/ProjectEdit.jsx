@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import './ProjectEdit.css'
+// import './ProjectEdit.css'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Layout } from '../../components'
 import { getProject, updateProject } from '../../services/projects'

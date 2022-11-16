@@ -1,4 +1,4 @@
-import './Sort.css'
+// import './Sort.css'
 
 const Sort = (props) => {
 

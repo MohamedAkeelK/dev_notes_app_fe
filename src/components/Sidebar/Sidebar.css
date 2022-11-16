@@ -1,0 +1,9 @@
+.sidebar {
+  /* border: 2px solid royalblue; */
+  background-color: rgb(42, 42, 42);
+  color: whitesmoke;
+  width: 20vw;
+  height: 100vh;
+  position: fixed;
+
+}
