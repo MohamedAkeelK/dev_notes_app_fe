@@ -1,4 +1,5 @@
 import api from "./apiConfig";
+import getToken from "./apiConfig";
 
 export const getProjects = async () => {
   try {
@@ -14,6 +15,15 @@ export const getProjects = async () => {
 export const getProject = async (id) => {
   try {
     const response = await api.get(`/projects/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const getUsersProjects = async () => {
+  try {
+    const response = await api.get(`/projects/my-projects`);
     return response.data;
   } catch (error) {
     throw error;
@@ -40,6 +50,8 @@ export const updateProject = async (id, project) => {
 
 export const deleteProject = async (id) => {
   try {
+    const resul = await getToken();
+    console.log(resul.config.headers.Authorization);
     const response = await api.delete(`/projects/${id}`);
     return response.data;
   } catch (error) {

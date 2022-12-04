@@ -31,7 +31,7 @@ const ProjectEdit = (props) => {
       [name]: value,
     })
   }
-
+ /// passing id of project
   const handleSubmit = async (event) => {
     event.preventDefault()
     await updateProject(id, project)

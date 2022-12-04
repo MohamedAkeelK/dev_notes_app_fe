@@ -1,68 +1,76 @@
-import { useState } from 'react'
+import { useState } from "react";
 // import './ProjectCreate.css'
-import { Layout } from '../../components'
-import { useNavigate } from 'react-router-dom'
-import { createProject } from '../../services/projects'
+import { Layout } from "../../components";
+import { useNavigate } from "react-router-dom";
+import { createProject } from "../../services/projects";
 
 const ProjectCreate = (props) => {
-
-  let navigate = useNavigate()
+  let navigate = useNavigate();
 
   const [project, setProject] = useState({
-    name: '',
-    description: '',
-    imgURL: '',
-  })
+    name: "",
+    description: "",
+    imgURL: "",
+  });
 
   const handleChange = (event) => {
-    const { name, value } = event.target
+    const { name, value } = event.target;
     setProject({
       ...project,
       [name]: value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = async (event) => {
-    event.preventDefault()
-    await createProject(project)
-    navigate('/projects')
-  }
+    event.preventDefault();
+    await createProject(project);
+    navigate("/projects");
+  };
 
   return (
     <Layout user={props.user}>
-      <form className='create-form' onSubmit={handleSubmit}>
+      <form className="create-form" onSubmit={handleSubmit}>
         <input
-          className='input-name'
-          placeholder='Name'
+          className="input-name"
+          placeholder="Name"
           value={project.name}
-          name='name'
+          name="name"
+          required
+          autoFocus
+          onChange={handleChange}
+        />
+        <input
+          className="input-name"
+          placeholder="author"
+          value={project.username}
+          name="username"
           required
           autoFocus
           onChange={handleChange}
         />
         <textarea
-          className='textarea-description'
+          className="textarea-description"
           rows={10}
-          placeholder='Description'
+          placeholder="Description"
           value={project.description}
-          name='description'
+          name="description"
           required
           onChange={handleChange}
         />
         <input
-          className='input-image-link'
-          placeholder='Image Link'
+          className="input-image-link"
+          placeholder="Image Link"
           value={project.imgURL}
-          name='imgURL'
+          name="imgURL"
           required
           onChange={handleChange}
         />
-        <button type='submit' className='submit-button'>
+        <button type="submit" className="submit-button">
           Submit
         </button>
       </form>
     </Layout>
-  )
-}
+  );
+};
 
-export default ProjectCreate
+export default ProjectCreate;

@@ -38,8 +38,6 @@ const ProjectCards = () => {
   return (
     <>
       <div className='product-cards'>
-        <h2 className='latest'>Latest Projects</h2>
-
         <div className='cards'>{CARDS}</div>
       </div>
     </>

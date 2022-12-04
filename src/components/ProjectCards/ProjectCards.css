@@ -5,31 +5,33 @@
     /* overflow-x: none; */
     margin-top: 70px;
     position: relative;
+    /* display: flex;
+    justify-content: center; */
+  
 }
 
 .cards {
     display: flex;
-    /* justify-content: cen/ter; */
-    align-items: baseline;
-
-    overflow-x: scroll;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .cards img {
   display: flex;
-  overflow-x: scroll;
+  margin-top: 40px;
+  /* overflow-x: scroll; */
 }
 
-.latest {
+/* .latest {
     font-size: 20px;
     color: rgb(56, 55, 55);
     padding: 10px;
-    /* margin-top: 40px; */
     text-align: center;
     position: fixed;
     top: 40px;
     left: 50%;
-}
+} */
 /* 
 @media (max-width: 500px) {
     .product-cards {

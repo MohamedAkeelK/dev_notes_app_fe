@@ -13,13 +13,14 @@
   /* border: 1px solid rgb(27, 157, 120); */
   margin-left: calc(15vw + 20px);
   /* padding: 0 20px 0px 0px; */
-  margin-top: 8vh;
+  margin-top: 7.6vh;
   /* background-color: rgb(156, 156, 156); */
 }
 
 .layout-children {
   /* flex: 2; */
-  padding: 20px 20px 20px 20px;
+  width: 80%;
+  padding: 0px 20px 20px 0px;
 } 
 /* 
 .layout-children {

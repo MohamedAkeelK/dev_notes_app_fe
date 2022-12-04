@@ -7,7 +7,7 @@ const ProjectCard = (props) => {
         <div className="product-card">
             <Link className="card" to={`/projects/${props._id}`}>
               <img className="product-card-image" src={props.imgURL} alt={props.name} />
-              <div classsName="deadline">{props.deadline}</div>
+              <div className="deadline">{props.deadline}</div>
               {/* <div className="mydescription">{props.description }</div> */}
               <div>View</div>
             </Link>
