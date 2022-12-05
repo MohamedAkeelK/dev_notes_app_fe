@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import './ProjectCards.css'
-import ProjectCard from '../ProjectCard/ProjectCard'
+import './AllProjectCards.css'
+import AllProjectCard from '../AllProjectCard/ProjectCard'
 import { getProjects } from '../../services/projects'
 
-const ProjectCards = () => {
+const AllProjectCards = () => {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
@@ -19,8 +19,8 @@ const ProjectCards = () => {
   const CARDS = projects
     .reverse()
     .map((project, index) =>
-      index < 3 ? (
-        <ProjectCard
+      index < 10 ? (
+        <AllProjectCard
           _id={project._id}
           name={project.name}
           description={project.description}
@@ -37,13 +37,11 @@ const ProjectCards = () => {
 
   return (
     <>
-      <div className='product-cards'>
-      <h1 className='latest-title'>Latest Projects</h1>
-
-        <div className='cards'>{CARDS}</div>
+      <div className='all-project-cards'>
+        <div className='all-cards'>{CARDS}</div>
       </div>
     </>
   )
 }
 
-export default ProjectCards
+export default AllProjectCards;

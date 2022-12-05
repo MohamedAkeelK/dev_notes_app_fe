@@ -4,12 +4,12 @@ const ProjectCard = (props) => {
   // console.log(props)
 
     return (
-        <div className="product-card">
+        <div className="project-card">
             <Link className="card" to={`/projects/${props._id}`}>
-              <img className="product-card-image" src={props.imgURL} alt={props.name} />
-              <div className="deadline">{props.deadline}</div>
-              {/* <div className="mydescription">{props.description }</div> */}
-              <div>View</div>
+              <img className="project-card-image" src={props.imgURL} alt={props.name} />
+              <div className="deadline">deadline: {props.deadline}</div>
+              <div className="mydescription">description: {props.description }</div>
+              <div className='home-view-btn'>View</div>
             </Link>
         </div>
     )

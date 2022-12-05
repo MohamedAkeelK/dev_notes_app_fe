@@ -3,23 +3,35 @@
     /* padding: 50px; */
     /* margin: 50px; */
     /* overflow-x: none; */
-    margin-top: 70px;
-    position: relative;
-    /* display: flex;
-    justify-content: center; */
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    /* position: relative; */
+    /* display: flex; */
+    /* justify-content: center; */
+  /* background-color: whitesmoke; */
+
   
 }
 
+.latest-title {
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
 .cards {
-    display: flex;
+  display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    /* width: 10vw; */
 }
 
 .cards img {
-  display: flex;
-  margin-top: 40px;
+  /* display: flex;
+  margin-top: 40px; */
   /* overflow-x: scroll; */
 }
 

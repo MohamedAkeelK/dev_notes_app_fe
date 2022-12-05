@@ -1,16 +1,18 @@
 import './Sidebar.css'
 import { NavLink } from 'react-router-dom'
 
-const authenticatedOptions = (
-  <>
-    {/* <NavLink className="link" to="/my-projects">My Projects</NavLink> */}
-    <NavLink className="link" to="/add-project">Add Project</NavLink>
-  </>
-)
+// const authenticatedOptions = (
+//   <>
+//     {/* <NavLink className="link" to="/my-projects">My Projects</NavLink> */}
+//     <NavLink className="link" to="/add-project">Add Project</NavLink>
+//   </>
+// )
 
 const alwaysOptions = (
   <>
-      <NavLink className="link" to="/">Home</NavLink>
+    <NavLink className="link" to="/">Home</NavLink>
+    <NavLink className="link" to="/add-project">Add Project</NavLink>
+    <NavLink className="link" to="/projects"> Projects</NavLink>
   </>
 )
 
@@ -33,7 +35,7 @@ export default function Sidebar(props) {
   return (
     <div className='sidebar'>
       {alwaysOptions}
-      {props.user ? authenticatedOptions : null}
+      {/* {props.user ? authenticatedOptions : null} */}
     </div>
   )
 }
