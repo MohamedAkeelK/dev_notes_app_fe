@@ -1,129 +1,54 @@
-/* @import url('https://fonts.googleapis.com/css?family=Kalam&display=swap');
 
 nav {
-    flex: 1;
-    position: fixed;
-    width: 100%;
-    background-color: white;
-    z-index: 1;
-    top: 0;
-    left: 0;
-}
-
-.nav {
-    display: flex;
-    padding: 20px 0;
-    margin-left: -2px;
-    margin-right: -2px;
-    margin-top: -2px;
-    box-shadow: 1px 1px 1px .3px #CECECE;
-    width: 100%;
-}
-
-.logo {
-    font-family: 'Kalam', cursive;
-    text-align: center;
-    font-weight: bold;
-    font-size: 34px;
-    letter-spacing: -3px;
-    flex: 1;
-    max-width: 30vw;
-    transition: 250ms all;
-}
-
-.logo:hover {
-    transform: scale(1.004);
-}
-
-.links {
-    flex: 2;
-    max-width: 60vw;
-    align-items: center;
-    font-size: 18px;
-    display: flex;
-}
-
-.link {
-    flex: 1;
-}
-
-.welcome {
-    padding: 0 100px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-@media (max-width: 500px) {
-    nav {
-        width: 98%;
-    }
-    .logo {
-        max-width: 50%;
-    }
-    .links {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 50vw;
-    }
-    .link {
-        padding: 3px;
-    }
-} */
-
-.nav {
-  /* border: 2px solid green; */
-  /* width: 100%; */
-  /* background-color: rgb(8, 48, 62); */
-  padding: 10px;
+  background-color: black;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 5.1vh;
-  z-index: 500;
-  /* background-color: rgb(45, 76, 168); */
-  /* background-color: whitesmoke; */
-  background-color: black;
-  border-bottom: 1px solid rgb(45, 76, 168);
-;
-
-}
-
-.top-nav-links {
-  display: flex;
-  justify-content: center;
-  margin-right: 20px;
   align-items: center;
-/* color: rgb(45, 76, 168); */
-color:whitesmoke;
-
+  padding: 16px;
+  position: fixed;
+  width: 98vw;
+  top: 0;
+  z-index: 20;
 }
 
-.top-nav-links > * {
-margin-left: 30px;
-text-decoration: none;
-/* color: whitesmoke; */
-/* color: rgb(45, 76, 168);
- */
-color:whitesmoke;
-
-
-}
-
-.nav .logo { 
+.logo { 
   font-size: 1.8rem;
   text-decoration: none;
   padding-left: 10px;
   color: whitesmoke;
   font-weight: bold;
-/* color: rgb(45, 76, 168); */
-color:whitesmoke;
 
+/* color: rgb(45, 76, 168); */
+
+}
+
+.nav-right {
+  color: whitesmoke;
+  /* width: 20%; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-right > div {
+  margin-right: 30px;
+}
+
+.nav-right .link {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 30px;
+
+}
+
+.searchbar {
+  width: 200px;
+  padding: 3px; 
+
+}
+#search-submit {
+  /* color: white; */
+  margin-right: 30px;
+  margin-left: 8px;
+  padding: 3px 8px 3px 8px;
 
 }

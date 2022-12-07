@@ -23,6 +23,7 @@ const ProjectCards = () => {
         <ProjectCard
           _id={project._id}
           name={project.name}
+          username={ project.username}
           description={project.description}
           deadline={project.deadline}
           imgURL={project.imgURL}
@@ -37,8 +38,8 @@ const ProjectCards = () => {
 
   return (
     <>
-      <div className='product-cards'>
-      <h1 className='latest-title'>Latest Projects</h1>
+      <div className=''>
+      <h1 className=''>Latest Projects</h1>
 
         <div className='cards'>{CARDS}</div>
       </div>

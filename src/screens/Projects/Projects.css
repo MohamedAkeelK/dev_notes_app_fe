@@ -1,4 +1,4 @@
-.products {
+/* .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -35,4 +35,9 @@ select {
         justify-content: center;
         margin: 0px;
     }
+} */
+
+
+.projects {
+  /* border: 1ppx solid black; */
 }

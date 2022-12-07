@@ -1,34 +1,62 @@
-/* @media (max-width: 500px) {
-    .home {
-        padding: 100px 40px;
-    }
-} */
+.hero { 
+  /* width: 84vw; */
+  /* background-color: aliceblue; */
+  /* padding: 40px; */
+  height: 94vh;
+  display: flex;
+}
+.hero-left {
+  background-color: #00000062; 
+  /* background-image: url("https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"); */
+   background-image: url("https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
 
-.home { 
-  width: 84vw;
-  /* border: 2px solid orange; */
+  
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.home-hero {
-  height: 95vh;
+.hero-text {
+  padding: 40px;
+  width: 50%;
+  text-align: center;
+  /* font-size: 3rem; */
+}
+
+
+.hero-text > h1 {
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+.hero-text > h2 {
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+
+.hero-text > p {
+  color: whitesmoke;
+
+}
+/* .home-hero {
+  height: 60vh;
   display: flex;
 
-}
-.home-left-hero{
-  /* width: 50%; */
 }
 
 .home-left-hero {
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 30px;
   padding-left: 80px;
-  /* background-color: rgb(36, 36, 36);
-  color: whitesmoke; */
-    background-color: white;
+  padding-top: 70px;
+  background-color: white;
   color: black;
 }
 
@@ -48,17 +76,14 @@
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
-  /* height: 100%; */
   width: 50%;
 }
 
 .home-title {
   font-size: 3rem;
-  /* width: 50%; */
 }
 
 .home-caption {
-  /* text-align: center; */
   font-size: 1rem;
   margin-top: 20px;
 }
@@ -66,6 +91,7 @@
 .latest-projects-title {
   text-align: center;
   padding-top: 70px;
+
 }
 
 .home-all-projects {
@@ -76,4 +102,4 @@
 .home-all-project-title {
   text-align: center;
   font-size: 2rem;
-}
+} */

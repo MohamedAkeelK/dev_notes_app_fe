@@ -37,8 +37,8 @@ const AllProjectCards = () => {
 
   return (
     <>
-      <div className='all-project-cards'>
-        <div className='all-cards'>{CARDS}</div>
+      <div className=''>
+        <div className=''>{CARDS}</div>
       </div>
     </>
   )

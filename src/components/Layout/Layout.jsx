@@ -6,9 +6,9 @@ import Sidebar from "../Sidebar/Sidebar";
 const Layout = (props) => (
   <div className="layout">
     <Nav user={props.user} />
-    <div className="main-content">
+    <div className="after-nav-elems">
       <Sidebar user={props.user} />
-      <div className="layout-children">{props.children}</div>
+      <div className="children">{props.children}</div>
       <Footer />
     </div>
 

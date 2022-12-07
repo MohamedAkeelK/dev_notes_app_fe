@@ -1,4 +1,4 @@
-.product-detail {
+/* .product-detail {
     display: flex;
     padding: 100px;
     padding-top: 80px;
@@ -105,4 +105,10 @@
     .edit-button, .delete-button {
         width: 40%;
     }
+} */
+
+.project-detail {
+    /* display: flex;
+    padding: 100px; */
+    /* padding-top:  80px; */
 }

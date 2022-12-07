@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-// import './Projects.css'
+import './Projects.css'
 
 import { Layout, Project, Search, Sort } from "../../components";
 // import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
@@ -61,19 +61,22 @@ const Projects = (props) => {
     <Layout user={props.user}>
       {/* <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} /> */}
-      <div className="products">
+      <div className="">
         {projects.map((project, index) => {
           return (
             <Project
               _id={project._id}
+              username={project.username}
+              authors={project.authors}
+              team={project.team} 
               name={project.name}
               description={project.description}
-              deadline={project.deadline}
+              codeSource={project.codeSource}
               imgURL={project.imgURL}
-              createdAt={project.createdAt}
+              deadline={project.deadline}
               techStack={project.techStack}
-              team={project.team}
               tasks={project.tasks}
+              createdAt={project.createdAt}
               key={index}
             />
           );
