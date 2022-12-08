@@ -12,7 +12,9 @@ const alwaysOptions = (
   <>
     <NavLink className="link" to="/">Home</NavLink>
     <NavLink className="link" to="/add-project">Add Project</NavLink>
-    <NavLink className="link" to="/projects"> Projects</NavLink>
+    <NavLink className="link" to="/projects">Projects</NavLink>
+    <NavLink className="link account" to="/projects">Account</NavLink>
+
   </>
 )
 

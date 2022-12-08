@@ -21,7 +21,7 @@ const Home = (props) => {
                 adipisicing elit. Ipsam, quos!
               </p>
               <br/>
-              <a href="/" className="">
+              <a href="/" className="cta">
                 Start Creating
               </a>
             </div>
@@ -31,7 +31,7 @@ const Home = (props) => {
         <ProjectCards />
 
         <section className="">
-          <h1 className="">All Projects</h1>
+          <h1 className="all-p-title">All Projects</h1>
           <AllProjectCards />
         </section>
       </div>

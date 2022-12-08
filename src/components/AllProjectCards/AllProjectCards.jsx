@@ -36,11 +36,11 @@ const AllProjectCards = () => {
     )
 
   return (
-    <>
-      <div className=''>
-        <div className=''>{CARDS}</div>
-      </div>
-    </>
+    // <>
+    //   <div className=''>
+        <div className='all-cards'>{CARDS}</div>
+      // </div>
+    // </>
   )
 }
 

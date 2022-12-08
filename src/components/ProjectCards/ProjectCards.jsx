@@ -19,7 +19,7 @@ const ProjectCards = () => {
   const CARDS = projects
     .reverse()
     .map((project, index) =>
-      index < 3 ? (
+      index < 6 ? (
         <ProjectCard
           _id={project._id}
           name={project.name}
@@ -38,8 +38,8 @@ const ProjectCards = () => {
 
   return (
     <>
-      <div className=''>
-      <h1 className=''>Latest Projects</h1>
+      <div className='lll'>
+      <h1 className='latest-t'>Latest Projects</h1>
 
         <div className='cards'>{CARDS}</div>
       </div>
