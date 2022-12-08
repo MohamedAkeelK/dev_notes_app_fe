@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import './ProjectCreate.css'
+import './ProjectCreate.css'
 import { Layout } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { createProject } from "../../services/projects";
@@ -29,10 +29,11 @@ const ProjectCreate = (props) => {
 
   return (
     <Layout user={props.user}>
+      <h1 className="create-title">Create a Project</h1>
       <form className="create-form" onSubmit={handleSubmit}>
         <input
           className="input-name"
-          placeholder="Name"
+          placeholder="Project name"
           value={project.name}
           name="name"
           required
@@ -62,6 +63,14 @@ const ProjectCreate = (props) => {
           placeholder="Image Link"
           value={project.imgURL}
           name="imgURL"
+          required
+          onChange={handleChange}
+        />
+        <input
+          className="input-codeSource-link"
+          placeholder="codeSource Link"
+          value={project.codeSource}
+          name="codeSource"
           required
           onChange={handleChange}
         />

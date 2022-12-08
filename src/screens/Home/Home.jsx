@@ -1,6 +1,7 @@
 import "./Home.css";
 import { Layout, ProjectCards } from "../../components";
 import AllProjectCards from "../../components/AllProjectCards/AllProjectCards";
+import { NavLink } from 'react-router-dom'
 
 const Home = (props) => {
   // console.log("THE USER : ", props.user)
@@ -20,10 +21,8 @@ const Home = (props) => {
                 Repellat, explicabo? Lorem, ipsum dolor sit amet consectetur
                 adipisicing elit. Ipsam, quos!
               </p>
-              <br/>
-              <a href="/" className="cta">
-                Start Creating
-              </a>
+              <br />
+              <NavLink className="cta" to="/add-project">Start Creating</NavLink>
             </div>
           </div>
         </section>

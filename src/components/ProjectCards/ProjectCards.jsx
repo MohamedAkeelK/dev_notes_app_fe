@@ -22,6 +22,7 @@ const ProjectCards = () => {
       index < 6 ? (
         <ProjectCard
           _id={project._id}
+          postedBy={project.postedBy}
           name={project.name}
           username={ project.username}
           description={project.description}

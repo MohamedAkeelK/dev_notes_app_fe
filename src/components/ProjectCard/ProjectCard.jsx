@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
     return (
         <div className="card">
         <Link className="inner-card" to={`/projects/${props._id}`}>
-          <p>{props.username }</p>
+          <p>wtf  {props.postedBy }</p>
               <img className="" src={props.imgURL} alt={props.name} />
               <div className="">deadline: {props.deadline}</div>
               <div className="">{limitDes(props.description) }  ...</div>

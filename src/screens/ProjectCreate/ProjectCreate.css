@@ -1,43 +1,52 @@
 .create-form {
-    padding-top: 50px;
+    padding: 30px 100px;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
-    justify-content: space-evenly;
+    /* width: 100%; */
+    /* justify-content: space-evenly; */
 }
 
-input:focus, textarea:focus, select:focus {
+.create-form > *{
+  margin-top: 30px;
+  padding: 10px;
+}
+
+
+.create-title {
+  padding-top: 60px;
+  text-align: center;
+}
+/* input:focus, textarea:focus, select:focus {
     outline: none;
-}
+} */
 
-input, textarea {
+/* input, textarea {
     font-size: 48px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;
-}
+} */
 
 textarea {
-    font-size: 24px;
+    /* font-size: 24px; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .input-name {
-    font-size: 48px;
+    /* font-size: 48px; */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .input-price {
-    padding-left: 10px;
-    font-size: 24px;
+    /* padding-left: 10px;
+    font-size: 24px; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .input-image-link {
-    font-size: 18px;
+    /* font-size: 18px; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -51,14 +60,4 @@ textarea {
     border: none;
     box-shadow: 2px 2px 10px 2px #CECECE;
     cursor: pointer;
-}
-
-@media (max-width: 500px) {
-    .create-form {
-        padding-top: 150px;
-    }
-    
-    input, textarea {
-        font-size: 28px;
-    }
 }
