@@ -1,4 +1,13 @@
 .all-projects-card {
+  transition: 250ms all;
+}
+
+.all-projects-card:hover {
+  transform: scale(1.02);
+  opacity: .9;
+}
+
+.all-projects-card {
   width: 40%; 
   padding: 20px;
   margin-bottom: 30px;

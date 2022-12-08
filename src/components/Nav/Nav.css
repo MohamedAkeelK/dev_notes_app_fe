@@ -1,6 +1,6 @@
 
 nav {
-  background-color: black;
+  background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,7 +15,8 @@ nav {
   font-size: 1.8rem;
   text-decoration: none;
   padding-left: 10px;
-  color: whitesmoke;
+  /* color: whitesmoke; */
+  color: rgb(25, 25, 25);
   font-weight: bold;
 
 /* color: rgb(45, 76, 168); */
@@ -23,7 +24,9 @@ nav {
 }
 
 .nav-right {
-  color: whitesmoke;
+  /* color: whitesmoke; */
+  color: rgb(25, 25, 25);
+
   /* width: 20%; */
   display: flex;
   justify-content: flex-end;
@@ -36,6 +39,8 @@ nav {
 .nav-right .link {
   text-decoration: none;
   color: whitesmoke;
+  color: rgb(25, 25, 25);
+
   margin-right: 30px;
 
 }

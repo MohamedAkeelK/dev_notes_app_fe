@@ -46,11 +46,11 @@
 }
 
 .cta{
-  padding: 10px;
-  background-color: rgb(31, 49, 166);
+  padding: 15px 20px;
+  background-color: rgb(0, 0, 0);
   text-decoration: none;
   color: whitesmoke;
-  border-radius: 10px;
+  border-radius: 3px;
 }
 
 .all-p-title {

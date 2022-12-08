@@ -12,7 +12,7 @@ const ProjectCard = (props) => {
           <p className="all-mydescription">
             description: {limitDes(props.description)}...
           </p>
-          <p>{props.techStack}</p>
+          {/* <p>{props.techStack}</p> */}
           <div className="">View</div>
       </Link>
     </div>
