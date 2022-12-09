@@ -1,6 +1,6 @@
 import './ProjectCard.css';
 import { Link } from 'react-router-dom'
-import Project from '../Project/Project';
+// import Project from '../Project/Project';
 
 export const limitDes = (des) => {
   // console.log(des)
@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
     return (
         <div className="card">
         <Link className="inner-card" to={`/projects/${props._id}`}>
-          <p>wtf  {props.postedBy }</p>
+          <p>{props.postedBy}</p>
               <img className="" src={props.imgURL} alt={props.name} />
               <div className="">deadline: {props.deadline}</div>
               <div className="">{limitDes(props.description) }  ...</div>

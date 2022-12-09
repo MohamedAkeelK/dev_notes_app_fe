@@ -1,9 +1,25 @@
 .project {
-  border: 1px solid black;
+  -webkit-box-shadow: 1px 2px 13px 0px rgba(12, 12, 12, 0.75);
+-moz-box-shadow: 1px 2px 13px 0px rgba(17, 17, 17, 0.75);
+box-shadow: 1px 2px 13px 0px rgba(51, 51, 51, 0.75);
   padding: 40px;
   margin-bottom: 50px;
 }
 
+.project a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color:black;
+
+}
+
+
+.project > a > *{
+  margin-top: 20px;
+}
 /* .project:hover {
     transform: scale(1.02);
     opacity: .9;

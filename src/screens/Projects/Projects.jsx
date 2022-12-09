@@ -61,7 +61,8 @@ const Projects = (props) => {
     <Layout user={props.user}>
       {/* <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
       <Sort onSubmit={handleSubmit} handleSort={handleSort} /> */}
-      <div className="">
+      <div className="project-ctr">
+        <h1 className="projects-page-title">All Projects Posted</h1>
         {projects.map((project, index) => {
           return (
             <Project

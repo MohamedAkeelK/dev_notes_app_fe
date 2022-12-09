@@ -41,3 +41,17 @@ select {
 .projects {
   border: 1px solid black;
 } */
+
+.project-ctr {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+
+
+}
+
+.projects-page-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+

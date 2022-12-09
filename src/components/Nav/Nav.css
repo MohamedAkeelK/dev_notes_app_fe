@@ -12,11 +12,12 @@ nav {
 }
 
 .logo { 
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   text-decoration: none;
   padding-left: 10px;
   /* color: whitesmoke; */
   color: rgb(25, 25, 25);
+  color: rgb(187, 110, 16);
   font-weight: bold;
 
 /* color: rgb(45, 76, 168); */

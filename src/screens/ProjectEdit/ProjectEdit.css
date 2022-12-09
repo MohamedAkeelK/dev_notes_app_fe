@@ -1,4 +1,4 @@
-.product-edit {
+/* .product-edit {
     display: flex;
     padding: 100px;
     padding-top: 80px;
@@ -80,4 +80,34 @@
     .edit-product-image {
         width: 300px;
     }
+} */
+
+.product-edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    /* padding-top: 80px; */
+} 
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-form > * {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.edit-product-image {
+  margin-bottom: 20px;
 }

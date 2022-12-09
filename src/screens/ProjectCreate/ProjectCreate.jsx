@@ -9,8 +9,14 @@ const ProjectCreate = (props) => {
 
   const [project, setProject] = useState({
     name: "",
+    username: "",
+    authors: "",
     description: "",
     imgURL: "",
+    codeSource: "",
+    techStack: "",
+    deadline: "",
+    tasks: "" 
   });
 
   const handleChange = (event) => {
@@ -41,11 +47,19 @@ const ProjectCreate = (props) => {
           onChange={handleChange}
         />
         <input
-          className="input-name"
-          placeholder="author"
+          className="input-username"
+          placeholder="username"
           value={project.username}
           name="username"
           required
+          autoFocus
+          onChange={handleChange}
+        />
+        <input
+          className="input-authors"
+          placeholder="authors"
+          value={project.authors}
+          name="authors"
           autoFocus
           onChange={handleChange}
         />
@@ -63,7 +77,6 @@ const ProjectCreate = (props) => {
           placeholder="Image Link"
           value={project.imgURL}
           name="imgURL"
-          required
           onChange={handleChange}
         />
         <input
@@ -71,7 +84,27 @@ const ProjectCreate = (props) => {
           placeholder="codeSource Link"
           value={project.codeSource}
           name="codeSource"
-          required
+          onChange={handleChange}
+        />
+        <input
+          className="input-techStack-link"
+          placeholder="techStack Link"
+          value={project.techStack}
+          name="techStack"
+          onChange={handleChange}
+        />
+        <input
+          className="input-deadline-link"
+          placeholder="deadline"
+          value={project.deadline}  
+          name="deadline"
+          onChange={handleChange}
+        />
+        <input
+          className="input-tasks-link"
+          placeholder="tasks"
+          value={project.tasks}
+          name="tasks"
           onChange={handleChange}
         />
         <button type="submit" className="submit-button">

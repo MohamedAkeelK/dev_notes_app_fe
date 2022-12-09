@@ -2,7 +2,7 @@ import "./Project.css";
 import { Link } from "react-router-dom";
 
 const Project = (props) => {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="project">
       <Link className="" to={`/projects/${props._id}`}>
