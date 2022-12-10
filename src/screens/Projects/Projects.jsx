@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import './Projects.css'
+import "./Projects.css";
 
-import { Layout, Project, Search, Sort } from "../../components";
+import { Layout, Project } from "../../components";
 // import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
 import { getProjects } from "../../services/projects";
 
@@ -55,7 +55,7 @@ const Projects = (props) => {
   //   setApplySort(true)
   // }
 
-  const handleSubmit = (event) => event.preventDefault();
+  // const handleSubmit = (event) => event.preventDefault();
 
   return (
     <Layout user={props.user}>
@@ -69,7 +69,7 @@ const Projects = (props) => {
               _id={project._id}
               username={project.username}
               authors={project.authors}
-              team={project.team} 
+              team={project.team}
               name={project.name}
               description={project.description}
               codeSource={project.codeSource}

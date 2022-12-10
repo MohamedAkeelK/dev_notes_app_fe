@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
-import "./AllProjectCards.css";
-import AllProjectCard from "../AllProjectCard/AllProjectCard";
+import "./LatestProjectCards.css";
+import LatestProjectCard from "../LatestProjectCard/LatestProjectCard.jsx";
 import { getProjects } from "../../services/projects";
 
-// THIS COMP APPEARS ON HOME PAGE AT ALL PROJECTS SECTION
-// gets called in screens/Home.jsx
-
-const AllProjectCards = () => {
+const LatestProjectCards = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -21,10 +18,12 @@ const AllProjectCards = () => {
   const CARDS = projects
     .reverse()
     .map((project, index) =>
-      index < 10 ? (
-        <AllProjectCard
+      index < 6 ? (
+        <LatestProjectCard
           _id={project._id}
+          postedBy={project.postedBy}
           name={project.name}
+          username={project.username}
           description={project.description}
           deadline={project.deadline}
           imgURL={project.imgURL}
@@ -38,12 +37,14 @@ const AllProjectCards = () => {
     );
 
   return (
-    // <>
-    //   <div className=''>
-    <div className="all-cards">{CARDS}</div>
-    // </div>
-    // </>
+    <>
+      <div className="lll">
+        <h1 className="latest-t">Latest Projects</h1>
+
+        <div className="cards">{CARDS}</div>
+      </div>
+    </>
   );
 };
 
-export default AllProjectCards;
+export default LatestProjectCards;
