@@ -24,6 +24,8 @@ const unauthenticatedOptions = (
 //         <NavLink className="link" to="/projects">Projects</NavLink>
 //     </>
 // )
+
+// Called in Layout component
 const Nav = ({ user }) => {
   return (
     <nav>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './ProjectCreate.css'
+import "./ProjectCreate.css";
 import { Layout } from "../../components";
 import { useNavigate } from "react-router-dom";
 import { createProject } from "../../services/projects";
@@ -16,7 +16,7 @@ const ProjectCreate = (props) => {
     codeSource: "",
     techStack: "",
     deadline: "",
-    tasks: "" 
+    tasks: "",
   });
 
   const handleChange = (event) => {
@@ -96,7 +96,7 @@ const ProjectCreate = (props) => {
         <input
           className="input-deadline-link"
           placeholder="deadline"
-          value={project.deadline}  
+          value={project.deadline}
           name="deadline"
           onChange={handleChange}
         />

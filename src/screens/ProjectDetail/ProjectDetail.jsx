@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './ProjectDetail.css'
+import "./ProjectDetail.css";
 import { Layout } from "../../components";
 import { getProject, deleteProject } from "../../services/projects";
 import { useParams, Link } from "react-router-dom";

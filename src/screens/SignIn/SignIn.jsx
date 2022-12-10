@@ -1,84 +1,84 @@
-import { useState } from 'react'
-import './SignIn.css'
-import { signIn } from '../../services/users'
-import { useNavigate } from 'react-router-dom'
+import { useState } from "react";
+import "./SignIn.css";
+import { signIn } from "../../services/users";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = (props) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    email: '',
-    password_digest: '',
+    email: "",
+    password_digest: "",
     isError: false,
-    errorMsg: '',
-  })
+    errorMsg: "",
+  });
 
   const handleChange = (event) => {
     setForm({
       ...form,
       [event.target.name]: event.target.value,
-    })
-  }
+    });
+  };
 
   const onSignIn = async (event) => {
-    event.preventDefault()
-    const { setUser } = props
+    event.preventDefault();
+    const { setUser } = props;
     try {
-      const user = await signIn(form)
-      setUser(user)
-      navigate('/projects')
+      const user = await signIn(form);
+      setUser(user);
+      navigate("/projects");
     } catch (error) {
-      console.error(error)
+      console.error(error);
       setForm({
         isError: true,
-        errorMsg: 'Invalid Credentials',
-        email: '',
-        password_digest: '',
-      })
+        errorMsg: "Invalid Credentials",
+        email: "",
+        password_digest: "",
+      });
     }
-  }
+  };
 
   const renderError = () => {
-    const toggleForm = form.isError ? 'danger' : ''
+    const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <button type='submit' className={toggleForm}>
+        <button type="submit" className={toggleForm}>
           {form.errorMsg}
         </button>
-      )
+      );
     } else {
-      return <button type='submit'>Sign In</button>
+      return <button type="submit">Sign In</button>;
     }
-  }
+  };
 
-  const { email, password_digest } = form
+  const { email, password_digest } = form;
 
   return (
-    <div className='form-container'>
+    <div className="form-container">
       <h3>Sign In</h3>
       <form onSubmit={onSignIn}>
         <label>Email</label>
         <input
           required
-          type='text'
-          name='email'
+          type="text"
+          name="email"
           value={email}
-          placeholder='Enter Email'
+          placeholder="Enter Email"
           onChange={handleChange}
         />
         <label>Password</label>
         <input
           required
-          name='password_digest'
+          name="password_digest"
           value={password_digest}
-          type='password'
-          placeholder='Password'
+          type="password"
+          placeholder="Password"
           onChange={handleChange}
         />
         {renderError()}
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default SignIn
+export default SignIn;
