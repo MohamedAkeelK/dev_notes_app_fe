@@ -15,7 +15,7 @@ const LatestProjectCard = (props) => {
   return (
     <div className="card">
       <Link className="inner-card" to={`/projects/${props._id}`}>
-        <p>{props.postedBy}</p>
+        {/* <p>{props.postedBy}</p> */}
         <img className="" src={props.imgURL} alt={props.name} />
         <div className="">deadline: {props.deadline}</div>
         <div className="">{limitDes(props.description)} ...</div>

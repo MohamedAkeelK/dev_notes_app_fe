@@ -8,6 +8,7 @@ export const getToken = () => {
 
 const api = axios.create({
   baseURL: "https://devnoteapp-production.up.railway.app/api",
+  // baseURL: "http://localhost:3000/api",
 });
 
 api.interceptors.request.use(
