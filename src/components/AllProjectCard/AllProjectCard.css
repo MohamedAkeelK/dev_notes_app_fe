@@ -31,3 +31,14 @@
   margin-top: 15px;
   color: black;
 }
+
+.all-projects-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-project-name {
+  font-weight: bolder;
+}

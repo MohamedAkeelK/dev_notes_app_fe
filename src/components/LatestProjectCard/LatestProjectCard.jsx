@@ -16,10 +16,14 @@ const LatestProjectCard = (props) => {
     <div className="card">
       <Link className="inner-card" to={`/projects/${props._id}`}>
         {/* <p>{props.postedBy}</p> */}
-        <img className="" src={props.imgURL} alt={props.name} />
-        <div className="">deadline: {props.deadline}</div>
+        <img
+          className="latest-project-name"
+          src={props.imgURL}
+          alt={props.name}
+        />
+        <div className="latest-project-name">{props.name}</div>
         <div className="">{limitDes(props.description)} ...</div>
-        <div className="">View</div>
+        <div className="view-btn">View</div>
       </Link>
     </div>
   );
