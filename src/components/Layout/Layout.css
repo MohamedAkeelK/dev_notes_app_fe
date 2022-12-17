@@ -1,9 +1,11 @@
 .after-nav-elems {
-  padding-top: 66px;
-  padding-left: calc(15vw + 40px);
+  /* padding-top: 66px; */
+  padding-left: calc(15vw);
   background-color: rgb(255, 255, 255) ;
+  display: flex;
 }
 
-/* .children {
-  padding: 40px;
-} */
+.children {
+  /* display: flex; */
+  /* padding: 40px; */
+}

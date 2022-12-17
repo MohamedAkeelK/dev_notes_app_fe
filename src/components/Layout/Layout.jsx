@@ -10,7 +10,7 @@ const Layout = (props) => (
     <div className="after-nav-elems">
       <Sidebar user={props.user} />
       <div className="children">{props.children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   </div>
 );
