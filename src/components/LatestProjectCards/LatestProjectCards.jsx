@@ -18,7 +18,7 @@ const LatestProjectCards = () => {
   const CARDS = projects
     .reverse()
     .map((project, index) =>
-      index < 3 ? (
+      index >= projects.length - 3 && index < projects.length ? (
         <LatestProjectCard
           _id={project._id}
           postedBy={project.postedBy}
