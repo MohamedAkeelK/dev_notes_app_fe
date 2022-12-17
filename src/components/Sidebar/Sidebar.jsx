@@ -23,11 +23,11 @@ const alwaysOptions = (
       Add Project
     </NavLink>
     <NavLink className="link" to="/projects">
-      Projects
+      All Projects
     </NavLink>
-    <NavLink className="link account" to="/projects">
+    {/* <NavLink className="link account" to="/projects">
       Account
-    </NavLink>
+    </NavLink> */}
   </>
 );
 
