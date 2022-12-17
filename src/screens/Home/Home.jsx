@@ -32,7 +32,7 @@ const Home = (props) => {
         <LatestProjectCards />
 
         <section className="">
-          <h1 className="all-p-title">All Projects</h1>
+          <h1 className="all-p-title">Featured Projects</h1>
           <AllProjectCards />
         </section>
       </div>

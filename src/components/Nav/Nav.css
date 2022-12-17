@@ -43,7 +43,8 @@ nav {
   text-decoration: none;
   color: whitesmoke;
   /* color: rgsb(25, 25, 25); */
-  background-color: #000000;
+  /* background-color: #000000; */
+  background-color: #9a6d64;
   margin-right: 30px;
   padding: 8px 15px;
   border-radius: 3px;

@@ -9,7 +9,7 @@
 
 .all-projects-card {
   width: 40%; 
-  padding: 20px;
+  padding: 40px 20px;
   margin-bottom: 30px;
   /* border: 1px solid black; */
   border-radius: 12px;
@@ -30,4 +30,15 @@
 .all-projects-card > a > * {
   margin-top: 15px;
   color: black;
+}
+
+.all-projects-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-project-name {
+  font-weight: bolder;
 }
