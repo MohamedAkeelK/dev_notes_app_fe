@@ -17,8 +17,9 @@ nav {
   padding-left: 10px;
   /* color: whitesmoke; */
   color: rgb(25, 25, 25);
-  color: rgb(187, 110, 16);
-  font-weight: bold;
+  color: #9a6d64;
+  font-weight: 900;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
 /* color: rgb(45, 76, 168); */
 
@@ -31,6 +32,7 @@ nav {
   /* width: 20%; */
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-right > div {
@@ -40,9 +42,11 @@ nav {
 .nav-right .link {
   text-decoration: none;
   color: whitesmoke;
-  color: rgb(25, 25, 25);
-
+  /* color: rgsb(25, 25, 25); */
+  background-color: #000000;
   margin-right: 30px;
+  padding: 8px 15px;
+  border-radius: 3px;
 
 }
 
@@ -57,4 +61,10 @@ nav {
   margin-left: 8px;
   padding: 3px 8px 3px 8px;
 
+}
+
+.welcome {
+  color: #9a6d64;
+  font-weight: bold;
+  font-size: 1.2rem;
 }

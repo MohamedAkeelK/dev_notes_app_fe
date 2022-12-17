@@ -35,15 +35,15 @@ const Nav = ({ user }) => {
       <div className="nav-right">
         <form className="search">
           {/* <label htmlFor="search" className='search-label'>Search</label> */}
-          <input
+          {/* <input
             type="text"
             className="searchbar"
             name="search"
             placeholder="Search"
           />
-          <input type="submit" name="submit" id="search-submit" />
+          <input type="submit" name="submit" id="search-submit" /> */}
         </form>
-        {user && <div className="">Welcome, {user.username}</div>}
+        {user && <div className="welcome">Welcome, {user.username}</div>}
         {/* {alwaysOptions} */}
         {user ? authenticatedOptions : unauthenticatedOptions}
       </div>
