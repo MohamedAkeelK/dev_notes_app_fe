@@ -21,6 +21,10 @@ const LatestProjectCard = (props) => {
           src={props.imgURL}
           alt={props.name}
         />
+        <div className="latest-project-name postedby">
+          <strong>Posted by: </strong>
+          {props.username}
+        </div>
         <div className="latest-project-name">{props.name}</div>
         <div className="">{limitDes(props.description)} ...</div>
         <div className="view-btn">View</div>
