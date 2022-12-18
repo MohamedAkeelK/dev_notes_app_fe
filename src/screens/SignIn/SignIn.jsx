@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./SignIn.css";
 import { signIn } from "../../services/users";
 import { useNavigate } from "react-router-dom";
+import Nav from "../../components/Nav/Nav.jsx";
 
 const SignIn = (props) => {
   const navigate = useNavigate();
@@ -47,37 +48,44 @@ const SignIn = (props) => {
         </button>
       );
     } else {
-      return <button type="submit">Sign In</button>;
+      return (
+        <button type="submit" className="submit-button">
+          Sign In
+        </button>
+      );
     }
   };
 
   const { email, password_digest } = form;
 
   return (
-    <div className="form-container">
-      <h3>Sign In</h3>
-      <form onSubmit={onSignIn}>
-        <label>Email</label>
-        <input
-          required
-          type="text"
-          name="email"
-          value={email}
-          placeholder="Enter Email"
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name="password_digest"
-          value={password_digest}
-          type="password"
-          placeholder="Password"
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
-    </div>
+    <>
+      <Nav />
+      <div className="signup-form-container">
+        <form onSubmit={onSignIn} className="signup-form">
+          <h1>Sign In</h1>
+          <label>Email</label>
+          <input
+            required
+            type="text"
+            name="email"
+            value={email}
+            placeholder="Enter Email"
+            onChange={handleChange}
+          />
+          <label>Password</label>
+          <input
+            required
+            name="password_digest"
+            value={password_digest}
+            type="password"
+            placeholder="Password"
+            onChange={handleChange}
+          />
+          {renderError()}
+        </form>
+      </div>
+    </>
   );
 };
 
