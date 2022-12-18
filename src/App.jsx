@@ -38,7 +38,9 @@ const App = () => {
         />
         <Route
           path="/projects/:id/edit"
-          element={user ? <ProjectEdit user={user} /> : <Navigate to="/" />}
+          element={
+            user ? <ProjectEdit user={user} /> : <Navigate to="/sign-up" />
+          }
         />
         <Route path="/projects/:id" element={<ProjectDetail user={user} />} />
       </Routes>
