@@ -52,20 +52,19 @@ const ProjectEdit = (props) => {
             src={project.imgURL}
             alt={project.name}
           />
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="imgURL">Image Link: </label>
-            <input
-              className="edit-input-image-link"
-              placeholder="Image Link"
-              value={project.imgURL}
-              name="imgURL"
-              required
-              onChange={handleChange}
-            />
-          </form>
+          {/* <form onSubmit={handleSubmit}></form> */}
         </div>
         <form className="edit-form" onSubmit={handleSubmit}>
-          <label htmlFor="name">Project Name: </label>
+          <label htmlFor="imgURL">Image Link For The Project</label>
+          <input
+            className="edit-input-image-link"
+            placeholder="Image Link"
+            value={project.imgURL}
+            name="imgURL"
+            required
+            onChange={handleChange}
+          />
+          <label htmlFor="name">Enter the Project Name</label>
           <input
             className="input-name"
             placeholder="Name"
@@ -75,7 +74,7 @@ const ProjectEdit = (props) => {
             autoFocus
             onChange={handleChange}
           />
-          <label htmlFor="username">Username: </label>
+          <label htmlFor="username">Project Creator</label>
           <input
             className="input-username"
             placeholder="username"
@@ -85,7 +84,7 @@ const ProjectEdit = (props) => {
             autoFocus
             onChange={handleChange}
           />
-          <label htmlFor="authors">Authors: </label>
+          <label htmlFor="authors">Project Authors</label>
           <input
             className="input-authors"
             placeholder="authors"
@@ -134,7 +133,7 @@ const ProjectEdit = (props) => {
             name="tasks"
             onChange={handleChange}
           />
-          <label htmlFor="description">Description: </label>
+          <label htmlFor="description">Describe Your Project</label>
           <textarea
             className="textarea-description"
             rows={10}
@@ -146,7 +145,7 @@ const ProjectEdit = (props) => {
             onChange={handleChange}
           />
 
-          <button type="submit" className="save-button">
+          <button type="submit" className="save-button submit-button">
             Save
           </button>
         </form>

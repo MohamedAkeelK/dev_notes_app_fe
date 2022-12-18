@@ -47,7 +47,7 @@ const ProjectCreate = (props) => {
           autoFocus
           onChange={handleChange}
         />
-        <label htmlFor="username">Who is the project creator?</label>
+        <label htmlFor="username">Project Creator</label>
         <input
           className="input-username"
           placeholder="username"
@@ -66,9 +66,7 @@ const ProjectCreate = (props) => {
           autoFocus
           onChange={handleChange}
         />
-        <label htmlFor="description">
-          Please enter a description of your project.
-        </label>
+        <label htmlFor="description">Describe Your Project</label>
         <textarea
           className="textarea-description"
           rows={10}
@@ -78,7 +76,7 @@ const ProjectCreate = (props) => {
           required
           onChange={handleChange}
         />
-        <label htmlFor="imgURL">Image link for you project.</label>
+        <label htmlFor="imgURL">Image Link For The Project</label>
         <input
           className="input-image-link"
           placeholder="Image Link"
@@ -94,7 +92,7 @@ const ProjectCreate = (props) => {
           name="codeSource"
           onChange={handleChange}
         />
-        <label htmlFor="techStack">What tech stack did you use? </label>
+        <label htmlFor="techStack">What Tech Stack Did You Use? </label>
         <input
           className="input-techStack-link"
           placeholder="techStack Link"
@@ -102,7 +100,7 @@ const ProjectCreate = (props) => {
           name="techStack"
           onChange={handleChange}
         />
-        <label htmlFor="deadline">Enter project deadline</label>
+        <label htmlFor="deadline">Enter Project Deadline</label>
         <input
           className="input-deadline-link"
           placeholder="deadline"
@@ -110,7 +108,9 @@ const ProjectCreate = (props) => {
           name="deadline"
           onChange={handleChange}
         />
-        <label htmlFor="tasks">Enter Project tasks seperated by commas</label>
+        <label htmlFor="tasks">
+          Enter Project Tasks (seperated by commas) ex. task1, task2,....
+        </label>
         <input
           className="input-tasks-link"
           placeholder="tasks"
