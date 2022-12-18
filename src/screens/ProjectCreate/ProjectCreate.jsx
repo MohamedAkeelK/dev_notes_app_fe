@@ -37,6 +37,7 @@ const ProjectCreate = (props) => {
     <Layout user={props.user}>
       <h1 className="create-title">Create a Project</h1>
       <form className="create-form" onSubmit={handleSubmit}>
+        <label htmlFor="name">Enter Your Project Name</label>
         <input
           className="input-name"
           placeholder="Project name"
@@ -46,6 +47,7 @@ const ProjectCreate = (props) => {
           autoFocus
           onChange={handleChange}
         />
+        <label htmlFor="username">Project Creator</label>
         <input
           className="input-username"
           placeholder="username"
@@ -55,6 +57,7 @@ const ProjectCreate = (props) => {
           autoFocus
           onChange={handleChange}
         />
+        <label htmlFor="authors">Project Authors</label>
         <input
           className="input-authors"
           placeholder="authors"
@@ -63,6 +66,7 @@ const ProjectCreate = (props) => {
           autoFocus
           onChange={handleChange}
         />
+        <label htmlFor="description">Describe Your Project</label>
         <textarea
           className="textarea-description"
           rows={10}
@@ -72,6 +76,7 @@ const ProjectCreate = (props) => {
           required
           onChange={handleChange}
         />
+        <label htmlFor="imgURL">Image Link For The Project</label>
         <input
           className="input-image-link"
           placeholder="Image Link"
@@ -79,6 +84,7 @@ const ProjectCreate = (props) => {
           name="imgURL"
           onChange={handleChange}
         />
+        <label htmlFor="codeSource">Enter Github Link</label>
         <input
           className="input-codeSource-link"
           placeholder="codeSource Link"
@@ -86,6 +92,7 @@ const ProjectCreate = (props) => {
           name="codeSource"
           onChange={handleChange}
         />
+        <label htmlFor="techStack">What Tech Stack Did You Use? </label>
         <input
           className="input-techStack-link"
           placeholder="techStack Link"
@@ -93,6 +100,7 @@ const ProjectCreate = (props) => {
           name="techStack"
           onChange={handleChange}
         />
+        <label htmlFor="deadline">Enter Project Deadline</label>
         <input
           className="input-deadline-link"
           placeholder="deadline"
@@ -100,6 +108,9 @@ const ProjectCreate = (props) => {
           name="deadline"
           onChange={handleChange}
         />
+        <label htmlFor="tasks">
+          Enter Project Tasks (seperated by commas) ex. task1, task2,....
+        </label>
         <input
           className="input-tasks-link"
           placeholder="tasks"

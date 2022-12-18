@@ -46,8 +46,11 @@ select {
   width: 80%;
   margin: auto;
   margin-top: 100px;
+  padding: 70px 50px;
+  /* background-color: #ffd9d286; */
+  background-color: rgb(0 0 0 / 8%);
 
-
+  border-radius: 20px;
 }
 
 .projects-page-title {

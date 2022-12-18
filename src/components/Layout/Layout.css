@@ -5,7 +5,8 @@
   display: flex;
 }
 
-/* .children {
-  display: flex;
-  padding: 40px;
-} */
+.children {
+  /* display: flex;
+  padding: 40px; */
+  width: 100%;
+}

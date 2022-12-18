@@ -25,6 +25,7 @@ const AllProjectCards = () => {
         <AllProjectCard
           _id={project._id}
           name={project.name}
+          username={project.username}
           description={project.description}
           deadline={project.deadline}
           imgURL={project.imgURL}

@@ -8,13 +8,23 @@ const Project = (props) => {
     <div className="project">
       <Link className="" to={`/projects/${props._id}`}>
         <img className="" src={props.imgURL} alt={props.name} />
-        <div className="">Posted by: {props.username}</div>
+        <div className="postedby">Posted by: {props.username}</div>
         <div className="">
-          authors: {props.authors[0]}, {props.authors[1]}
+          <strong>authors: </strong>
+          {props.authors[0]}, {props.authors[1]}
         </div>
-        <div className="">project name: {props.name}</div>
-        <div className="">project description: {props.description}</div>
-        <div className="">created at: {props.createdAt}</div>
+        <div className="">
+          <strong>project name: </strong>
+          {props.name}
+        </div>
+        <div className="">
+          <strong>project description: </strong>
+          {props.description}
+        </div>
+        <div className="createdat">created at: {props.createdAt}</div>
+        <a href="/" className="view-btn">
+          View
+        </a>
         {/* <div className="">team: {props.team}</div> */}
         {/* <div className="">codeSource: {props.codeSource}</div> */}
         {/* <div className="">deadline: {props.deadline}</div> */}

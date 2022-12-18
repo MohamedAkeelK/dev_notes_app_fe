@@ -30,22 +30,28 @@ const ProjectDetail = (props) => {
           src={project.imgURL}
           alt={project.name}
         />
-        <div className="detail">
-          <div className="name">{project.name}</div>
-          <div className="description">{project.description}</div>
-          <div className="">Posted by: {project.username}</div>
-          <div className="">
-            authors: {project.authors[0]}, {project.authors[1]}
-          </div>
-          <div className="">team: {project.team}</div>
-          <div className="">project name: {project.name}</div>
-          <div className="">project description: {project.description}</div>
-          <div className="">codeSource: {project.codeSource}</div>
+        <h1 className="detail-name">{project.name}</h1>
+        <div className="detail-createdat">created at: {project.createdAt}</div>
 
-          <div className="">deadline: {project.deadline}</div>
-          <div className="">techStack: {project.techStack}</div>
-          <div className="">tasks: {project.tasks}</div>
-          <div className="">created at: {project.createdAt}</div>
+        <div className="detail">
+          <h2>Description</h2>
+          <div className="description">{project.description}</div>
+          <h2>Posted By</h2>
+          <div className="">{project.username}</div>
+          <h2>Authors</h2>
+          <div className="">
+            {project.authors[0]}, {project.authors[1]}
+          </div>
+          {/* <h2>Team</h2> */}
+          {/* <div className="">{project.team[0]}</div> */}
+          <h2>Code Source</h2>
+          <div className="">{project.codeSource}</div>
+          <h2>Deadline</h2>
+          <div className="">{project.deadline}</div>
+          <h2>Tech Stack Used</h2>
+          <div className="">{project.techStack}</div>
+          <h2>Tasks</h2>
+          <div className="">{project.tasks}</div>
           <div className="button-container">
             <Link className="edit-button" to={`/projects/${project._id}/edit`}>
               Edit
