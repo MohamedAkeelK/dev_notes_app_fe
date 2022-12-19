@@ -11,10 +11,10 @@ const authenticatedOptions = (
 );
 const unauthenticatedOptions = (
   <>
-    <NavLink className="link" to="/sign-up">
+    <NavLink className="link sign-up-link" to="/sign-up">
       Sign Up
     </NavLink>
-    <NavLink className="link" to="/sign-in">
+    <NavLink className="link sign-in-link" to="/sign-in">
       Sign In
     </NavLink>
   </>
@@ -51,4 +51,3 @@ const Nav = ({ user }) => {
   );
 };
 export default Nav;
-
