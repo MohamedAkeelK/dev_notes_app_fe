@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import "./ProjectDetail.css";
 import { Layout } from "../../components";
-import { getProject, deleteProject } from "../../services/projects";
+import {
+  getProject,
+  deleteProject,
+  updateProject,
+} from "../../services/projects";
 import { useParams, Link } from "react-router-dom";
 
 const ProjectDetail = (props) => {
@@ -53,7 +57,11 @@ const ProjectDetail = (props) => {
           <h2>Tasks</h2>
           <div className="">{project.tasks}</div>
           <div className="button-container">
-            <Link className="edit-button" to={`/projects/${project._id}/edit`}>
+            <Link
+              className="edit-button"
+              to={`/projects/${project._id}/edit`}
+              onClick={() => updateProject(project._id)}
+            >
               Edit
             </Link>
             <Link
