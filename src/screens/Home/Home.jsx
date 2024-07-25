@@ -35,6 +35,9 @@ const Home = (props) => {
           <h1 className="all-p-title">Featured Projects</h1>
           <AllProjectCards />
         </section>
+        <section>
+          
+        </section>
       </div>
     </Layout>
   );
